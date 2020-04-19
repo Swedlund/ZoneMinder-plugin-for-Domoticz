@@ -40,7 +40,5 @@ The following devices are created:
 | Type                | Name                      | Description
 | :---                | :--                       | :---
 | Selector Switch     | State                     | Can set the running state of ZoneMinder to Start/Stop/Restart
-| :---                | :---                      | :---
 | Selector Switch     | Monitor #                 | Can set monitor state Monitor/Modect/Record/Mocord/Nodect
-| :---                | :---                      | :---
 | Switch              | Monitor # Status          | Can enable/disable the monitor
