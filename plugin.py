@@ -95,6 +95,9 @@ class BasePlugin:
 		Domoticz.Log("onStart called")
 		Domoticz.Heartbeat(30)
 
+		if Parameters["Mode6"] == "Debug":
+			Domoticz.Debugging(1)
+
 		#Login to ZoneMinder
 		self.api.login()
 
@@ -121,10 +124,6 @@ class BasePlugin:
 					Domoticz.Log("Device Monitor "+str(Name)+" Function with id "+str(Id)+"1 was created.")
 					Domoticz.Device(Name="Monitor "+str(Name)+" Status", Unit=int(Id+"2"), Type=17, Switchtype=0).Create()
 					Domoticz.Log("Device Monitor "+str(Name)+" Status with id "+str(Id)+"2 was created.")
-
-		if Parameters["Mode6"] == "Debug":
-			Domoticz.Debugging(1)
-
 
 	def onStop(self):
 		Domoticz.Log("onStop called")
